@@ -11,10 +11,10 @@
 	<name>Black Pepper Parent</name>
 	
 	<scm>
-		<connection>scm:git:git@codebasehq.com:blackpepper/bp/bp-parent.git</connection>
-		<developerConnection>scm:git:git@codebasehq.com:blackpepper/bp/bp-parent.git</developerConnection>
+		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:BlackPepperSoftware/bp-parent.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://blackpepper.codebasehq.com/bp/bp-parent.git</url>
+		<url>https://github.com/BlackPepperSoftware/bp-parent</url>
 	</scm>
 	
 	<properties>
