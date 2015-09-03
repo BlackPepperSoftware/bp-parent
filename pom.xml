@@ -9,6 +9,20 @@
 	<version>1.1.0-SNAPSHOT</version>
 	
 	<name>Black Pepper Parent</name>
+	<description>Parent POM for Black Pepper projects.</description>
+	<url>https://github.com/BlackPepperSoftware/bp-parent</url>
+	
+	<developers>
+	
+		<developer>
+			<id>mark.hobson</id>
+			<name>Mark Hobson</name>
+			<email>mark.hobson@blackpepper.co.uk</email>
+			<organization>Black Pepper Software</organization>
+			<organizationUrl>http://www.blackpepper.co.uk/</organizationUrl>
+		</developer>
+		
+	</developers>
 	
 	<scm>
 		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-parent.git</connection>
