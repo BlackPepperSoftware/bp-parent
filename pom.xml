@@ -11,6 +11,7 @@
 	<name>Black Pepper Parent</name>
 	<description>Parent POM for Black Pepper projects.</description>
 	<url>https://github.com/BlackPepperSoftware/bp-parent</url>
+	<inceptionYear>2014</inceptionYear>
 	
 	<organization>
 		<name>Black Pepper Software</name>
