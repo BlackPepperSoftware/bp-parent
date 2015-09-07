@@ -281,6 +281,37 @@
 					<version>0.7.5.201505241946</version>
 				</plugin>
 				
+				<!-- Mycila -->
+				
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>2.11</version>
+					<configuration>
+						<header>header.txt</header>
+						<headerDefinitions>
+							<headerDefinition>headerDefinitions.xml</headerDefinition>
+						</headerDefinitions>
+						<properties>
+							<owner>${project.organization.name}</owner>
+						</properties>
+						<excludes>
+							<exclude>.checkstyle</exclude>
+							<exclude>LICENSE</exclude>
+						</excludes>
+						<mapping>
+							<java>JAVA_STYLE</java>
+						</mapping>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>uk.co.blackpepper</groupId>
+							<artifactId>bp-build</artifactId>
+							<version>1.1.0-SNAPSHOT</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				
 				<!-- Less -->
 				
 				<plugin>
