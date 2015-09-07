@@ -12,6 +12,11 @@
 	<description>Parent POM for Black Pepper projects.</description>
 	<url>https://github.com/BlackPepperSoftware/bp-parent</url>
 	
+	<organization>
+		<name>Black Pepper Software</name>
+		<url>http://www.blackpepper.co.uk/</url>
+	</organization>
+	
 	<developers>
 	
 		<developer>
