@@ -84,7 +84,7 @@
 		
 		<!-- Dependency versions -->
 		
-		<bpBuildVersion>1.1.0-SNAPSHOT</bpBuildVersion>
+		<bpBuildVersion>1.1.0</bpBuildVersion>
 
 	</properties>
 	
