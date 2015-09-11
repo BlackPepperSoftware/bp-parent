@@ -3,6 +3,19 @@ Black Pepper Parent
 
 Parent POM for [Black Pepper](http://www.blackpepper.co.uk/) projects.
 
+Getting started
+---------------
+
+To use this POM in your project, update your POM to extend it as follows:
+
+```xml
+<parent>
+    <groupId>uk.co.blackpepper</groupId>
+    <artifactId>bp-parent</artifactId>
+    <version>1.1.0</version>
+</parent>
+```
+
 License
 -------
 
