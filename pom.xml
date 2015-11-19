@@ -51,6 +51,14 @@
 			<organization>Black Pepper Software</organization>
 			<organizationUrl>http://www.blackpepper.co.uk/</organizationUrl>
 		</developer>
+
+		<developer>
+			<id>john.eccleston</id>
+			<name>John Eccleston</name>
+			<email>john.eccleston@blackpepper.co.uk</email>
+			<organization>Black Pepper Software</organization>
+			<organizationUrl>http://www.blackpepper.co.uk/</organizationUrl>
+		</developer>
 		
 	</developers>
 	
