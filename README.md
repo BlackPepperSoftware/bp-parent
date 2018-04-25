@@ -12,7 +12,7 @@ To use this POM in your project, update your POM to extend it as follows:
 <parent>
     <groupId>uk.co.blackpepper</groupId>
     <artifactId>bp-parent</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </parent>
 ```
 
