@@ -1,3 +1,10 @@
 language: java
 install: true
-script: mvn -s src/main/config/maven/settings.ci.xml deploy
+before_script:
+  - |
+    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+      PHASE="verify"
+    else
+      PHASE="deploy"
+    fi
+script: mvn -s src/main/config/maven/settings.ci.xml "$PHASE"
