@@ -1,5 +1,6 @@
 language: java
 install: true
+if: tag IS blank
 before_script:
   - |
     if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
