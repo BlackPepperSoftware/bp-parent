@@ -259,6 +259,12 @@
 				
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>buildnumber-maven-plugin</artifactId>
 					<version>1.2</version>
 				</plugin>
@@ -496,6 +502,61 @@
 								<goals>
 									<goal>sign</goal>
 								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>nonRelease</id>
+			<!--
+				Disable deploy of "release-versioned" builds, *unless build is as a result of
+				maven-release-plugin*.
+				
+				This prevents Travis CI attempting to deploy an artifact with a non-snapshot
+				version. This deploy will have already occurred as a result of the developer's
+				release (performed locally.)
+				
+				Note that this profile will be activated whenever the release plugin is *not*
+				used, and the skip deploy property will then be set whenever the project version
+				is *not* a snapshot.
+			-->
+			<activation>
+				<property>
+					<name>!performRelease</name>
+				</property>
+			</activation>
+			<properties>
+				<skipNexusStagingDeployMojo>${isReleaseVersion}</skipNexusStagingDeployMojo>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>determine-build-type</id>
+								<!--
+									Set isReleaseVersion to "true" if project version *does not*
+									end in "-SNAPSHOT".
+									
+									If the project version *does* end in "-SNAPSHOT", isReleaseVersion
+									will instead equal the project version. Deploy will therefore be
+									skipped.
+								-->
+								<goals>
+									<goal>regex-property</goal>
+								</goals>
+								<configuration>
+									<name>isReleaseVersion</name>
+									<value>${project.version}</value>
+									<regex>^(?!.*-SNAPSHOT$).*$</regex>
+									<replacement>true</replacement>
+									<failIfNoMatch>false</failIfNoMatch>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
