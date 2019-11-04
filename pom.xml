@@ -21,7 +21,7 @@
 	<groupId>uk.co.blackpepper</groupId>
 	<artifactId>bp-parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.4.1-SNAPSHOT</version>
+	<version>1.5.0-SNAPSHOT</version>
 	
 	<name>Black Pepper Parent</name>
 	<description>Parent POM for Black Pepper projects.</description>
